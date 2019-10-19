@@ -25,6 +25,9 @@ public class Clock extends JPanel implements Runnable {
     }
 
     public void paint(Graphics g) {
+        g.clearRect(0, 0, 230, 230);
+        g.setColor(Color.cyan);
+        g.fillRect(0, 0, 230, 230);
         int xhour, yhour, xminute, yminute, xsecond, ysecond, hour, minute, second;
         drawStructure(g);
         curreDate = new Date();
