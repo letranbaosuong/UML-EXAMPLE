@@ -64,6 +64,7 @@ public class Main1 extends Application {
         lblNgayBan.setMinWidth(70);
         dpkNgayBan = new DatePicker(LocalDate.now());
         dpkNgayBan.setMinWidth(200);
+        dpkNgayBan.setEditable(false);
         hBox1.getChildren().addAll(lblSoHoaDon, txtSoHoaDon, lblNgayBan, dpkNgayBan);
         hBox1.setSpacing(5);
         hBox1.setPadding(new Insets(5));
@@ -108,21 +109,22 @@ public class Main1 extends Application {
         VBox vbBoxCenter = new VBox();
         HBox hBoxTitile = new HBox();
         Label lblSTT = new Label("STT");
-        lblSTT.setMinWidth(52);
+        lblSTT.setMinWidth(50);
         Label lblMSMatHang = new Label("MS Mặt hàng");
-        lblMSMatHang.setMinWidth(102);
+        lblMSMatHang.setMinWidth(100);
         Label lblTenMathang = new Label("Tên mặt hàng");
-        lblTenMathang.setMinWidth(202);
+        lblTenMathang.setMinWidth(200);
         Label lblDVT = new Label("Đơn vị tính");
-        lblDVT.setMinWidth(102);
+        lblDVT.setMinWidth(100);
         Label lblSoLuong = new Label("Số lượng");
-        lblSoLuong.setMinWidth(102);
+        lblSoLuong.setMinWidth(100);
         Label lblDonGia = new Label("Đơn giá");
-        lblDonGia.setMinWidth(102);
+        lblDonGia.setMinWidth(100);
         Label lblTriGia = new Label("Trị giá");
-        lblTriGia.setMinWidth(152);
+        lblTriGia.setMinWidth(150);
         hBoxTitile.getChildren().addAll(lblSTT, lblMSMatHang, lblTenMathang, lblDVT, lblSoLuong, lblDonGia, lblTriGia);
         hBoxTitile.setPadding(new Insets(5));
+        hBoxTitile.setSpacing(3);
         gridPane = new GridPane();
         gridPane.setPadding(new Insets(5));
         scrollPane = new ScrollPane(gridPane);
@@ -230,6 +232,7 @@ public class Main1 extends Application {
         txt = new TextField();
         txtSTTList.add(txt);
         txt.setPrefWidth(50);
+        txt.setEditable(false);
         gridPane.add(txt, 0, nRowsCT);
         TextField txtMSMH = new TextField();
         txtMSMatHangList.add(txtMSMH);
@@ -266,6 +269,7 @@ public class Main1 extends Application {
         gridPane.add(txtTriGia, 6, nRowsCT);
         nRowsCT++;
         txtSTTList.get(nRowsCT - 1).setText(String.valueOf(nRowsCT));
+        gridPane.setHgap(3);
         scrollPane.setVvalue(1);
         // do du lieu vao bang
         cboMSMatHang.setItems(optionsMSMH);
