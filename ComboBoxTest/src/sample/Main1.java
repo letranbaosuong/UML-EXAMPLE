@@ -316,6 +316,7 @@ public class Main1 extends Application {
             }
             btnLuu.setDisable(true);
             btnTaoMoi.setDisable(false);
+            btnThemChiTiet.setDisable(true);
         } catch (Exception e) {
             System.out.println(e.getMessage() + ". Cần chuyển sang Region Settings là Việt Nam");
         }
@@ -336,6 +337,7 @@ public class Main1 extends Application {
             btnTaoMoi.setDisable(true);
             TriGia_Change(); // Lệnh mới thêm (30/09/2017)
         }
+        btnThemChiTiet.setDisable(false);
     }
 
     public void TriGia_Change() {
